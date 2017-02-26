@@ -52,6 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="IAccount.cs" />
+    <Compile Include="IStatementPrinter.cs" />
+    <Compile Include="ITransaction.cs" />
+    <Compile Include="ITransactionRepository.cs" />
     <Compile Include="PrintAllStatements.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

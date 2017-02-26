@@ -11,9 +11,17 @@ namespace BankKata.Tests
     [TestFixture]
     public class PrintAllStatements
     {
+        private IAccount _account;
+        private Mock<ITransactionRepository> _repo;
+        private Mock<IStatementPrinter> _statementPrinter;
+
         [SetUp]
         public void Init()
         {
+            _statementPrinter = new Mock<IStatementPrinter>();
+            _repo = new Mock<ITransactionRepository>();
+
+            _account = new Account(_repo, _statementPrinter);
         }
 
         [Test]
@@ -23,7 +31,7 @@ namespace BankKata.Tests
             _account.Withdraw(100);
             _account.Deposit(500);
 
-            var transactions = _repo.AllTransactions();
+            List<ITransaction> transactions = _repo.Object.AllTransactions();
 
             _account.PrintStatements();
 
