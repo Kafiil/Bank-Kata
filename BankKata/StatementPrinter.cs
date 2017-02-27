@@ -43,10 +43,8 @@ namespace BankKata
 
         private string  GetTransactionLine(Transaction transaction, int balance)
         {
-            return string.Format("{0} | {1} | {2}",
-                transaction.Date,
-                transaction.Amount.ToString("F"),
-                balance.ToString("F"), new CultureInfo("fr-FR"));
+            return $"{transaction.Date} | {transaction.Amount:F} | {balance:F}";
+               
             
         }
 

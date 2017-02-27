@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Moq;
 using NUnit.Framework;
 
@@ -27,9 +24,9 @@ namespace BankKata.Tests
             List<Transaction> transactions = GetSomeTransactions();
             _statementPrinter.Print(transactions);
             _writer.Verify(w => w.Write("DATE | AMOUNT | BALANCE"));
-            _writer.Verify(w => w.Write("10/04/2014 | 500,00 | 1400,00"));
-            _writer.Verify(w => w.Write("02/04/2014 | -100,00 | 900,00"));
-            _writer.Verify(w => w.Write("01/04/2014 | 1000,00 | 1000,00"));
+            _writer.Verify(w => w.Write($"10/04/2014 | {500:F} | {1400:F}"));
+            _writer.Verify(w => w.Write($"02/04/2014 | {-100:F} | {900:F}"));
+            _writer.Verify(w => w.Write($"01/04/2014 | {1000:F} | {1000:F}"));
             
         }
 
