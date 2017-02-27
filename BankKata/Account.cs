@@ -1,6 +1,4 @@
-﻿using Moq;
-
-namespace BankKata.Tests
+﻿namespace BankKata
 {
     public class Account : IAccount
     {

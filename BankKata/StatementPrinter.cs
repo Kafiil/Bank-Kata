@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
 
-namespace BankKata.Tests
+namespace BankKata
 {
     public class StatementPrinter : IStatementPrinter
     {

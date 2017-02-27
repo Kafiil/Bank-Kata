@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BankKata.Tests
+namespace BankKata
 {
     public interface ITransactionRepository
     {

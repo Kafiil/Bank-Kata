@@ -1,4 +1,4 @@
-﻿namespace BankKata.Tests
+﻿namespace BankKata
 {
     public interface IWriter
     {

@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using NUnit.Framework;
 
-namespace BankKata.Tests
+namespace BankKata
 {
     public interface IStatementPrinter
     {
