@@ -31,7 +31,7 @@ namespace BankKata.Tests
             _account.Withdraw(100);
             _account.Deposit(500);
 
-            List<ITransaction> transactions = _repo.Object.AllTransactions();
+            List<Transaction> transactions = _repo.Object.AllTransactions();
 
             _account.PrintStatements();
 

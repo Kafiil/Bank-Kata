@@ -5,6 +5,7 @@ namespace BankKata.Tests
 {
     public interface IStatementPrinter
     {
-        void Print(List<ITransaction> transactions);
+       
+        void Print(List<Transaction> transactions);
     }
 }

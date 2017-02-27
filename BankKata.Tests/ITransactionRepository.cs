@@ -4,7 +4,7 @@ namespace BankKata.Tests
 {
     public interface ITransactionRepository
     {
-        List<ITransaction> AllTransactions();
+        List<Transaction> AllTransactions();
         void Deposit(int i);
         void Withdraw(int i);
     }
