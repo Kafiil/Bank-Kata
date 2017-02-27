@@ -55,6 +55,7 @@
     <Compile Include="Account.cs" />
     <Compile Include="AccountTests.cs" />
     <Compile Include="IAccount.cs" />
+    <Compile Include="IClock.cs" />
     <Compile Include="IStatementPrinter.cs" />
     <Compile Include="ITransaction.cs" />
     <Compile Include="ITransactionRepository.cs" />
@@ -64,6 +65,8 @@
     <Compile Include="StatementPrinter.cs" />
     <Compile Include="StatementPrinterTests.cs" />
     <Compile Include="Transaction.cs" />
+    <Compile Include="TransactionRepository.cs" />
+    <Compile Include="TransactionRepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
