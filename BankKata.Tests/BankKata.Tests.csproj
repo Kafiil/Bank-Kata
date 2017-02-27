@@ -52,24 +52,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
     <Compile Include="AccountTests.cs" />
-    <Compile Include="IAccount.cs" />
-    <Compile Include="IClock.cs" />
-    <Compile Include="IStatementPrinter.cs" />
-    <Compile Include="ITransaction.cs" />
-    <Compile Include="ITransactionRepository.cs" />
-    <Compile Include="IWriter.cs" />
     <Compile Include="PrintAllStatements.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StatementPrinter.cs" />
     <Compile Include="StatementPrinterTests.cs" />
-    <Compile Include="Transaction.cs" />
-    <Compile Include="TransactionRepository.cs" />
     <Compile Include="TransactionRepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BankKata\BankKata.csproj">
+      <Project>{f2b1c6bc-5274-4715-9df6-da72346008c4}</Project>
+      <Name>BankKata</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
