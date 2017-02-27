@@ -21,7 +21,7 @@ namespace BankKata.Tests
             _statementPrinter = new Mock<IStatementPrinter>();
             _repo = new Mock<ITransactionRepository>();
 
-            _account = new Account(_repo, _statementPrinter);
+            _account = new Account(_repo.Object, _statementPrinter.Object);
         }
 
         [Test]

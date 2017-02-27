@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
+    <Compile Include="AccountTests.cs" />
     <Compile Include="IAccount.cs" />
     <Compile Include="IStatementPrinter.cs" />
     <Compile Include="ITransaction.cs" />

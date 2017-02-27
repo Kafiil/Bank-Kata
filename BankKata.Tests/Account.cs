@@ -2,30 +2,33 @@
 
 namespace BankKata.Tests
 {
-    public  class Account : IAccount
+    public class Account : IAccount
     {
-        private Mock<ITransactionRepository> _repo;
-        private Mock<IStatementPrinter> _statementPrinter;
+        private readonly ITransactionRepository _repo;
+        private readonly IStatementPrinter _statementPrinter;
 
-        public Account(Mock<ITransactionRepository> repo, Mock<IStatementPrinter> statementPrinter)
+
+        public Account(ITransactionRepository repo, IStatementPrinter statementPrinter)
         {
-            this._repo = repo;
-            this._statementPrinter = statementPrinter;
+
+            _statementPrinter = statementPrinter;
+            _repo = repo;
+
         }
 
-        public void Deposit(int p0)
+        public void Deposit(int amount)
         {
-            throw new System.NotImplementedException();
+            _repo.Deposit(amount);
         }
 
-        public void Withdraw(int i)
+        public void Withdraw(int amount)
         {
-            throw new System.NotImplementedException();
+            _repo.Withdraw(-amount);
         }
 
         public void PrintStatements()
         {
-            throw new System.NotImplementedException();
+            _statementPrinter.Print(_repo.AllTransactions());
         }
     }
 }
